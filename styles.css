@@ -8,8 +8,6 @@
 
 /* Général */
 body{
-    margin: 0;
-    height: 100vh;
     background-image: repeating-linear-gradient(135deg, rgb(93,93,93, 0.1) 0px, rgba(93,93,93, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #bcaaa4, #bcaaa4);
     overflow: hidden;
 }
@@ -20,6 +18,10 @@ h1, h2{
 p{
     font-family: 'Libre Caslon Text', serif;
 }
+.container{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
 /* Header */
 .logo-header{
     height: 10vh;
@@ -27,8 +29,65 @@ p{
 }
 header{
     background-color: #8c7b75;
+}
+/* Accueil */ 
+/* Video Acceuil */
+video{
     width: 100%;
 }
+#anim-accueil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(26.5%, -140%);
+}
+.logo-site-accueil{
+    height: 25%;
+    width: auto;
+}
+#thebeginning{
+    font-size: 90px;
+    text-decoration: underline overline #efdcd5;
+    color: rgb(160, 19, 19);
+    font-weight: bold;
+    font-family: Brush Script Std;
+    animation-duration: 3s;
+    animation-name: slidein;
+    animation-direction: alternate;
+}
+/* Keyframes */
+@keyframes slidein {
+    from {
+      margin-left:100%;
+      width:300%;
+    }
+    to {
+      margin-left:0%;
+      width:100%;
+    }
+}
+/* Button accueil-Menu */
+.btn-accueil{
+    position: absolute;
+    left: 22%;
+    background-color: firebrick;
+    text-decoration: none;
+    color: black;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    -webkit-transform: scale(1.25);
+	transform: scale(1.25);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.btn-accueil:hover{
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    color: #efdcd5;
+}
+
 /* Footer */
 .logo-footer{
     height: 10vh;
@@ -56,8 +115,6 @@ footer{
     display: flex;
     overflow: hidden;
     width: 100%;
-    position: absolute;
-    bottom: 10%;
 }
 .anim-span{
     font-weight: bold;
@@ -73,50 +130,68 @@ footer{
         /* x= valeurs horizontal y= valeurs vertical */
     }
 }
-/* Button accueil-Menu */
-.btn-accueil{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    background-color: firebrick;
-    text-decoration: none;
-    color: black;
-    padding: 15px;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    -webkit-transform: scale(1.25);
-	transform: scale(1.25);
-	-webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+/* Page Blog */
+#page-blog{
+    overflow: visible;
 }
-.btn-accueil:hover{
-    -webkit-transform: scale(1);
-    transform: scale(1);
+.row{
+    margin: 0;
 }
-#thebeginning{
-    font-size: 90px;
-    text-decoration: underline overline #efdcd5;
-    color: rgb(160, 19, 19);
-    font-weight: bold;
-    font-family: Brush Script Std;
+#section-blog{
+    width: 100%;
     display: flex;
     justify-content: center;
-    transform: translate(50px, -400%);
-    animation-duration: 3s;
-    animation-name: slidein;
-    animation-direction: alternate;
 }
-/* Keyframes */
-@keyframes slidein {
-    from {
-      margin-left:100%;
-      width:300%;
-    }
-    to {
-      margin-left:0%;
-      width:100%;
-    }
+#section-blog p{
+    text-align: center;
+}
+.div-article-1 a, .div-article-2 a{
+    display: flex;
+    justify-content: flex-end;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.div-article-1{
+    background-color: gray;
+    border: solid 5px rgb(160, 19, 19);
+    padding-top: 12px;
+}
+.div-article-1 p, .div-article-2 p{
+    padding-top: 12px;
+    font-size: 20px;
+}
+#img-art-elvis{
+    width: 50%;
+    position: relative;
+    left: 25%;
+}
+.div-article-2{
+    background-color: green;
+    border: solid 5px black;
+    padding-top: 12px;
+}
+#img-art-tiff{
+    width: 25%;
+    position: relative;
+    left: 35%;
+}
+#recap-art{
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+#recap-art button{
+    background-color: black;  
+}
+#recap-art a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 /* Menu en cercle */
 .container-menu{
@@ -259,37 +334,7 @@ footer{
     top: 15%;
     left: 15%;
 }
-/* Video Acceuil */
-video{
-    width: 70%;
-    height: auto;
-    margin-left: 15%;
-    margin-top: 2.5%;
-}
-/* logo site Accueil */
-.logo-site-accueil{
-    height: 25vh;
-    width: auto;
-    position: absolute;
-    top: 25%;
-    left: 40%;
-}
-/* Page Blog */
-#section-blog{
-    height: 700px;
-    width: auto;
-}
-.div-article{
-    
-}
-#img-art-elvis{
-    width: 20vw;
-    height: auto;
-}
-#img-art-tiff{
-    width: 15vw;
-    height: auto;
-}
+/* Media Querry */
 @media (max-width:320px){
     body{
         width: aut;
@@ -302,12 +347,8 @@ video{
     }
     .header{
         background-color: #8c7b75;
-        width: auto;
-        height: 10%;
     }
     #thebeginning{
         font-size: 30px;
-        transform: none;
-            
+        transform: none;   
     }
-}
