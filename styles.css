@@ -9,7 +9,7 @@
 /* Général */
 body{
     background-image: repeating-linear-gradient(135deg, rgb(93,93,93, 0.1) 0px, rgba(93,93,93, 0.1) 2px, transparent 2px, transparent 4px), linear-gradient(90deg, #bcaaa4, #bcaaa4);
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 h1, h2{
     font-family: 'Goudy Bookletter 1911', serif;
@@ -17,6 +17,10 @@ h1, h2{
 }
 p{
     font-family: 'Libre Caslon Text', serif;
+}
+section{
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .container{
     margin-top: 50px;
@@ -358,7 +362,7 @@ footer{
 @media (max-width:320px){
     #div-anim{
         position: absolute;
-        top: 15%;
+        top: 35%;
         left: 20%;
     }
     #logo-accueil{
@@ -378,5 +382,9 @@ footer{
     }
     .anim-span{
         font-size: 15px;
+    }
+    section{
+        padding-top: 114px;
+        padding-bottom: 113px;
     }
     
