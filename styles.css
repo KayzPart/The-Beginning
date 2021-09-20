@@ -31,22 +31,27 @@ header{
     background-color: #8c7b75;
 }
 /* Accueil */ 
-/* Video Acceuil */
-video{
-    width: 100%;
+/* Div video */
+#video-accueil{
+    z-index: 99;
+    position: relative;
+    
 }
-#anim-accueil{
+#logo-accueil{
+    
+    
+}
+#div-anim{
+    z-index: 99;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    transform: translate(26.5%, -140%);
-}
-.logo-site-accueil{
-    height: 25%;
-    width: auto;
+    position: absolute;
+    top: 20%;
+    left: 32.5%;
 }
 #thebeginning{
-    font-size: 90px;
+    font-size: 120px;
     text-decoration: underline overline #efdcd5;
     color: rgb(160, 19, 19);
     font-weight: bold;
@@ -69,7 +74,9 @@ video{
 /* Button accueil-Menu */
 .btn-accueil{
     position: absolute;
-    left: 22%;
+    left: 42.5%;
+    top: 100%;
+    width: 115px;
     background-color: firebrick;
     text-decoration: none;
     color: black;
@@ -136,6 +143,19 @@ footer{
 }
 .row{
     margin: 0;
+}
+.nav-link{
+    color: black;
+    font-weight: bold;
+}
+.nav-link:hover{
+    color: #9ea7aa;
+}
+.dropdown-menu{
+    background: #8c7b75;
+}
+.dropdown-item{
+    font-weight: bold;
 }
 #section-blog{
     width: 100%;
@@ -336,19 +356,27 @@ footer{
 }
 /* Media Querry */
 @media (max-width:320px){
-    body{
-        width: aut;
-    }
-    .logo-site-accueil{
-        height: 10vh;
-        width: auto;
+    #div-anim{
         position: absolute;
-        left: 35%;
+        top: 15%;
+        left: 20%;
     }
-    .header{
-        background-color: #8c7b75;
+    #logo-accueil{
+        width: 35vh;
+        padding-left: 10px;  
     }
     #thebeginning{
-        font-size: 30px;
-        transform: none;   
+        font-size: 35px;
     }
+    .btn-accueil{
+        padding: 5px;
+        width: auto;
+        font-size: 10px;
+    }
+    .lien-footer{
+        font-size: 13px;
+    }
+    .anim-span{
+        font-size: 15px;
+    }
+    
